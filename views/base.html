@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+			<meta charset="utf-8">
+			<title>{% block title %}{% endblock %}</title>
+
+			<link href="{{ base_url }}/bootstrap/css/bootstrap.css" rel="stylesheet">
+			<link href="{{ base_url }}/src/style.css" rel="stylesheet">
+			<link rel="icon" type="image/png" href="{{ base_url }}/src/favicon.png" />
+			<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="{{ base_url }}/src/favicon.png" />
+			<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+        {% endblock %}
+    </head>
+    <body>
+		<div id="wrap">
+			<div class="container">
+				<div class="page-header">{% block header %}{% endblock %}</div>
+				{% block content %}{% endblock %}
+			</div>
+
+			<div id="push"></div>
+		</div>
+
+	    <div id="footer">
+	      <div class="container">
+			{% block footer %}
+				<p class="muted credit">&copy; {{ "now"|date('Y') }} <a href="http://jeck.ru/">Jeck Labs</a>.</p>
+			{% endblock %}
+	      </div>
+	    </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}&mu;Grabber{% endblock %}
+
+{% block header %}
+<h1>&mu;Grabber /</h1>
+{% endblock %}
+
+{% block content %}
+	<p>
+		<a href="{{ base_url }}/addTask" class="btn btn-large btn-primary" type="button">Новая задача</a>
+		<a href="{{ base_url }}/export" class="btn btn-large btn-success" type="button">Экспорт данных</a>
+	</p>
+{% endblock %}
